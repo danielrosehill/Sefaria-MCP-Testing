@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sefaria": {
+      "type": "sse",
+      "url": "https://mcp.sefaria.org/sse"
+    },
+    "hebcal": {
+      "type": "sse",
+      "url": "https://www.hebcal.com/mcp"
+    }
+  }
+}
