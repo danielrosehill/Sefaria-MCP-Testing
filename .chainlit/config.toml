@@ -1,0 +1,17 @@
+[project]
+name = "Sefaria Explorer"
+enable_telemetry = false
+
+[features]
+prompt_playground = false
+multi_modal = false
+
+[UI]
+name = "Sefaria Explorer"
+description = "Explore Jewish texts with AI assistance"
+default_theme = "light"
+custom_css = "/public/styles.css"
+hide_cot = false
+
+[meta]
+generated_by = "chainlit"

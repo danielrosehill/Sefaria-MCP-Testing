@@ -1,0 +1,111 @@
+/* RTL Support for Hebrew Text */
+
+/* Import Hebrew-friendly fonts */
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Noto+Sans+Hebrew:wght@400;500;700&display=swap');
+
+/* Global RTL container styles */
+[dir="rtl"],
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'David Libre', 'Noto Sans Hebrew', 'David', serif;
+}
+
+/* Hebrew text blocks */
+.hebrew-text {
+    direction: rtl;
+    text-align: right;
+    font-family: 'David Libre', 'Noto Sans Hebrew', serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Mixed content - auto-detect direction */
+.mixed-content {
+    unicode-bidi: plaintext;
+}
+
+/* Sefaria reference styling */
+.sefaria-ref {
+    color: #4a90a4;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sefaria-ref:hover {
+    text-decoration: underline;
+}
+
+/* Source text (Hebrew/Aramaic) styling */
+.source-text {
+    direction: rtl;
+    text-align: right;
+    font-family: 'David Libre', 'Noto Sans Hebrew', serif;
+    font-size: 1.15em;
+    line-height: 2;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 0.5em 0;
+    border-right: 4px solid #4a90a4;
+}
+
+/* English translation styling */
+.translation-text {
+    direction: ltr;
+    text-align: left;
+    font-style: italic;
+    color: #555;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    border-left: 3px solid #ccc;
+}
+
+/* Message content adjustments */
+.message-content {
+    unicode-bidi: plaintext;
+}
+
+/* Code blocks should remain LTR */
+pre, code {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Ensure proper rendering of mixed Hebrew/English */
+p, div, span {
+    unicode-bidi: embed;
+}
+
+/* Topic/category badges */
+.topic-badge {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    background-color: #e8f4f8;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin: 0.25em;
+}
+
+/* Search results styling */
+.search-result {
+    padding: 1em;
+    margin: 0.5em 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.search-result-ref {
+    font-weight: 600;
+    color: #4a90a4;
+    margin-bottom: 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .source-text {
+        font-size: 1em;
+        padding: 0.75em;
+    }
+}
